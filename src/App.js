@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./assests/App.css";
 import AppRoutes from "./routes";
+import { Provider } from "react-redux";
+import store from "./store/appStore";
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
+			<Provider store={store}>
 				<AppRoutes />
-			</div>
+			</Provider>
 		);
 	}
 }
