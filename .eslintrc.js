@@ -2,7 +2,8 @@ module.exports = {
     env: {
       browser: true,
       es6: true,
-      mocha: true
+      mocha: true,
+      "jest":true
     },
     extends: [
       "eslint:recommended",
@@ -16,9 +17,10 @@ module.exports = {
       ecmaVersion: 2018,
       sourceType: "module"
     },
+    parser: "babel-eslint",
     plugins: ["react", "import"],
     rules: {
-      indent: ["error", "tab"],
+      indent: ["error", 2],
       "linebreak-style": ["error", "unix"],
       quotes: ["error", "double"],
       semi: ["error", "always"],
